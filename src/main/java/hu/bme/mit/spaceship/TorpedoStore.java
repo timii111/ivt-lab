@@ -7,7 +7,7 @@ import java.util.Random;
 */
 public class TorpedoStore {
 
-  private double FAILURERATE = 0.0;
+  private double FAILURERATE2 = 0.0;
 
   private int torpedoCount = 0;
   private Random generator = new Random();
@@ -19,9 +19,9 @@ public class TorpedoStore {
     String failureEnv = System.getenv("IVT_RATE");
     if (failureEnv != null){
       try {
-        FAILURERATE = Double.parseDouble(failureEnv);
+        FAILURERATE2 = Double.parseDouble(failureEnv);
       } catch (NumberFormatException nfe) {
-        FAILURERATE = 0.0;
+        FAILURERATE2 = 0.0;
       }
     }
   }
