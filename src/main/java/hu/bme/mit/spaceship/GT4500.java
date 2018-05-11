@@ -19,7 +19,12 @@ public class GT4500 implements SpaceShip {
     // TODO not implemented yet
     return false;
   }
-
+  
+  public void setService(Service service) {
+    // Save the reference to the passed-in service inside this client
+    this.service = service;
+  }
+  
   /**
   * Tries to fire the torpedo stores of the ship.
   *
