@@ -9,12 +9,16 @@ import org.junit.Test;
 public class GT4500Test {
 
   private GT4500 ship;
+  private TorpedoStore mockStr1;
+    private TorpedoStore mockStr2;
 
   @Before
   public void init(){
-    //this.ship = new GT4500();
-    
-    this.ship = mock(TorpedoStore.class);
+
+    mockStr1 = mock(TorpedoStore.class);
+      mockStr2 = mock(TorpedoStore.class);
+    this.ship = new GT4500(mockStr1, mockStr2);
+
   }
 
   @Test
