@@ -23,25 +23,21 @@ public class GT4500Test {
 
   @Test
   public void fireTorpedo_Single_Success(){
-    // Arrange
 
-    // Act
-    boolean result = verify(ship).fireTorpedo(FiringMode.SINGLE);
+      when(mockStr1.fire(1)).thenReturn(true);
+      ship.fireTorpedo(FiringMode.SINGLE);
 
-    // Assert
-    assertEquals(true, result);
+      verify(mockStr1, times(1)).fire(1);
     
   }
 
   @Test
-  public void fireTorpedo_All_Success(){
-    // Arrange
+  public void fireTorpedo_All_Success() {
+      // Arrange
+      when(mockStr1.fire(1)).thenReturn(true);
+      ship.fireTorpedo(FiringMode.ALL);
 
-    // Act
-    boolean result = ship.fireTorpedo(FiringMode.ALL);
-
-    // Assert
-    assertEquals(true, result);
+      verify(mockStr1, times(1)).fire(1);
   }
 
 }
